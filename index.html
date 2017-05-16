@@ -7,6 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="css/main.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('ul.akkordeon li.active div').slideDown(0);
+            $('ul.akkordeon li > p').click(
+                    function () {
+                        if(!$(this).parent().hasClass('active')){
+                            $('ul.akkordeon li.active div').slideUp(200);
+                            $('ul.akkordeon li').removeClass('active');
+
+                            $(this).parent().addClass('active');
+                            $(this).next('div').slideDown(200);
+                        }else{
+                            $(this).parent().removeClass('active');
+                            $(this).next('div').slideUp();
+                        }
+                    }
+            )
+        })
+    </script>
+
 
 </head>
 <body>
@@ -125,7 +146,18 @@
                 <nav class="main-menu">
                     <ul class="akkordeon">
                         <li class="active">
-                            <a href="#">Latest ASX Announcements</a>
+                            <p class="link">Latest ASX Announcements</p>
+                            <div class="drop-menu .needactive">
+                                <h1>[CFE] Clarification Announcement</h1>
+                                <p>CAPE LAMBERT IRON ORE LTD Clarification Announcement</p>
+                                <h1>[EIG] Notice of Extraordinary General Meeting/Proxy Form</h1>
+                                <p>EUROPEAN INVESTORS GLOBAL PROPERTY TRUST Notice of Extraordinary General Meeting/Proxy Form</p>
+                                <h1>[MXtX] Notice of Change of Interests of Substantial Holder from CUO</h1>
+                                <p>MINSEC (BVI) Notice of Change of Interests of Substantial Holder from CUO</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="link">Why Choose Us?</p>
                             <div class="drop-menu">
                                 <h1>[CFE] Clarification Announcement</h1>
                                 <p>CAPE LAMBERT IRON ORE LTD Clarification Announcement</p>
@@ -136,16 +168,37 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">Why Choose Us?</a>
+                            <p class="link">What Makes Us Different?</p>
+                            <div class="drop-menu">
+                                <h1>[CFE] Clarification Announcement</h1>
+                                <p>CAPE LAMBERT IRON ORE LTD Clarification Announcement</p>
+                                <h1>[EIG] Notice of Extraordinary General Meeting/Proxy Form</h1>
+                                <p>EUROPEAN INVESTORS GLOBAL PROPERTY TRUST Notice of Extraordinary General Meeting/Proxy Form</p>
+                                <h1>[MXtX] Notice of Change of Interests of Substantial Holder from CUO</h1>
+                                <p>MINSEC (BVI) Notice of Change of Interests of Substantial Holder from CUO</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">What Makes Us Different?</a>
+                            <p class="link">$5000 Trading Account</p>
+                            <div class="drop-menu">
+                                <h1>[CFE] Clarification Announcement</h1>
+                                <p>CAPE LAMBERT IRON ORE LTD Clarification Announcement</p>
+                                <h1>[EIG] Notice of Extraordinary General Meeting/Proxy Form</h1>
+                                <p>EUROPEAN INVESTORS GLOBAL PROPERTY TRUST Notice of Extraordinary General Meeting/Proxy Form</p>
+                                <h1>[MXtX] Notice of Change of Interests of Substantial Holder from CUO</h1>
+                                <p>MINSEC (BVI) Notice of Change of Interests of Substantial Holder from CUO</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#">$5000 Trading Account</a>
-                        </li>
-                        <li>
-                            <a href="#">Join the Trading Room Now!</a>
+                            <p class="link">Join the Trading Room Now!</p>
+                            <div class="drop-menu">
+                                <h1>[CFE] Clarification Announcement</h1>
+                                <p>CAPE LAMBERT IRON ORE LTD Clarification Announcement</p>
+                                <h1>[EIG] Notice of Extraordinary General Meeting/Proxy Form</h1>
+                                <p>EUROPEAN INVESTORS GLOBAL PROPERTY TRUST Notice of Extraordinary General Meeting/Proxy Form</p>
+                                <h1>[MXtX] Notice of Change of Interests of Substantial Holder from CUO</h1>
+                                <p>MINSEC (BVI) Notice of Change of Interests of Substantial Holder from CUO</p>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -158,9 +211,9 @@
     <div class="wrapper">
         <div class="left-footer">
         <ul>
-            <li>XTML</li>
-            <li>CSS</li>
-            <li>Disclaimer</li>
+            <li><span class="underline" >XTML</span></li>
+            <li><span class="underline" >CSS</span></li>
+            <li><span class="underline" >Disclaimer</span></li>
         </ul>
         <p class="copyright">Copyright &#169;2008 The Board Tree. All Rights  reserved  </p>
         </div>

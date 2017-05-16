@@ -54,6 +54,7 @@ table {
 
 body{
     font: 14px/16px Arial, sans-serif;
+    background: #000;
 }
 
 
@@ -449,22 +450,25 @@ body{
     margin-bottom: 5px;
 }
 
-#right-colomn .main-menu ul li a{
-    text-decoration: none;
+#right-colomn .main-menu ul li .link{
+    position: relative;
     display: block;
-    background: linear-gradient(to top, #878787, #423b3b );
+    padding-top:5px;
+    padding-left: 40px;
+   padding-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+    background: linear-gradient(to top, #878787, #423b3b );
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    padding-top:5px;
-    padding-left: 40px;
-    height: 24px;
-    position: relative;
  }
 
-#right-colomn .main-menu ul li a:before{
+#right-colomn .main-menu ul li .link:hover{
+    cursor: pointer;
+}
+
+#right-colomn .main-menu ul li .link:before{
     content: " ";
     position: absolute;
     top:5px;
@@ -477,7 +481,7 @@ body{
     transition:1s;
 }
 
-#right-colomn .main-menu ul li.active a:before{
+#right-colomn .main-menu ul li.active .link:before{
     display: none;
     width: 0;
 }
@@ -487,7 +491,7 @@ body{
         transform: rotate(358deg);
     }
 }
-#right-colomn .main-menu ul li a:hover:before{
+#right-colomn .main-menu ul li .link:hover:before{
    transform: rotateZ(180deg);
     transition:1s;
 
@@ -496,13 +500,14 @@ body{
 #right-colomn .main-menu ul li.active{
     margin-bottom: 20px;
 }
-#right-colomn .main-menu ul li.active a{
+#right-colomn .main-menu ul li.active .link{
 
     padding-left: 5px;
     height: 32px;
 }
-#right-colomn .main-menu ul li.active .drop-menu{
-    display: block;
+#right-colomn .main-menu ul li .drop-menu{
+    /*display: block;*/
+    display: none;
     background: #389103;
     padding: 15px 10px;
     font-size:12px;
@@ -512,10 +517,6 @@ body{
     -moz-box-shadow: inset 0px 3px 10px -10px #3f3838;
     box-shadow: inset 0px 11px 3px -10px #3f3838;
 
-}
-
-#right-colomn .main-menu ul li .drop-menu{
-    display: none;
 }
 
 
@@ -548,15 +549,17 @@ footer ul{
     float: left;
 }
 
-footer li, footer .underline{
-    text-decoration: underline;
-    text-decoration-color: #23da08;
+ footer .underline{
+    /*text-decoration: underline;
+    text-decoration-color: #23da08;*/
+    border-bottom: 1px solid #23da08;
 }
 
 footer li{
     float: left;
-    padding-right:4px ;
-    padding-left: 5px;
+    padding:0 5px;
+
+
     border-right: 2px solid #fff;
 }
 
