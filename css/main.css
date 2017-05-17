@@ -249,7 +249,6 @@ body{
 .head-menu ul{
     display: flex;
     justify-content:space-around;
-    flex-direction: row;
     height: 25px;
 }
 
@@ -293,11 +292,12 @@ body{
 }
 
 #main-content h1{
+    padding-bottom: 13px;
     color: #fff;
     font: 30px/36px Arial, sans-serif;
     font-weight: bold;
-    padding-bottom: 13px;
-    text-align: left;
+
+
 }
 
 #main-content h2{
@@ -329,16 +329,20 @@ body{
     border: 3px solid #999999;
 }
 
-#main-content .quote-block h1{
-    margin-bottom: 0;
-    padding: 8px 10px 5px 10px ;
+#main-content .quote-block cite{
+   /* margin-bottom: 0;*/
+    display: block;
+    padding: 10px ;
     font-size: 22px ;
+    font-style: normal;
+    font-weight: bold;
     color: #fff;
     background: linear-gradient(to top,#5d5959, #3f3838);
 
 }
 
 #main-content .quote-block .quoter{
+
     padding: 10px;
     margin:0 ;
     background: #389103;
@@ -552,7 +556,9 @@ footer ul{
  footer .underline{
     /*text-decoration: underline;
     text-decoration-color: #23da08;*/
+    color:#fff;
     border-bottom: 1px solid #23da08;
+     text-decoration:none;
 }
 
 footer li{
