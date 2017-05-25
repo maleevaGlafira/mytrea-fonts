@@ -7,26 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower|Kumar+One|Oxygen" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('ul.akkordeon li.active div').slideDown(0);
-            $('ul.akkordeon li > p').click(
-                    function () {
-                        if(!$(this).parent().hasClass('active')){
-                            $('ul.akkordeon li.active div').slideUp(200);
-                            $('ul.akkordeon li').removeClass('active');
+    <script type="text/javascript" src="js/main.js">  </script>
 
-                            $(this).parent().addClass('active');
-                            $(this).next('div').slideDown(200);
-                        }else{
-                            $(this).parent().removeClass('active');
-                            $(this).next('div').slideUp();
-                        }
-                    }
-            )
-        })
-    </script>
 
 
 </head>
